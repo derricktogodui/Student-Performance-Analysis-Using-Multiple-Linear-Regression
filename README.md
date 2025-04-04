@@ -1,29 +1,49 @@
 # Student-Performance-Analysis-Using-Multiple-Linear-Regression
 
-📌 Project Overview
+## Analysis of Student Performance Based on Attendance and Exercise Scores
+### Prepared by: Derrick Kwaku Togodui
 
-This project explores the relationship between student attendance, exercise scores, and overall performance using multiple linear regression. By analyzing real classroom data from 145 students, we aimed to determine how well these factors predict final grades and uncover actionable insights for educators.
+## Introduction
+This report presents an analysis of the relationship between student attendance, exercise scores, and overall semester performance. The goal was to determine whether attendance and exercise participation can predict student performance and to derive insights that can help improve academic outcomes.
 
-🔬 Methodology
-1. Data Collection: Student records including attendance percentages, weekly exercise scores, and final exam scores.
-2. Data Cleaning & Preprocessing: Handled missing values and ensured data consistency using Google Sheets.
-3. Exploratory Data Analysis (EDA): Visualized relationships between variables to understand correlations.
-4. Regression Modeling: Used Python (Google Colab) to perform multiple linear regression and assess the predictive power of attendance and exercise scores.
-
-📊 Key Findings
-1. Attendance alone is a weak predictor of performance (R² = 0.198, correlation r = 0.44).
-2. Exercise scores are a much stronger predictor (R² = 0.535, correlation r = 0.83).
-3. For every 1-point increase in exercise scores, final grades improve by approximately 2.2 points.
-4. Other factors likely influence performance, as 46.5% of the variation remains unexplained.
-
-📌 Recommendations
-1. Prioritize student engagement over attendance alone—active participation in exercises has a greater impact on performance.
-2. Use analytics to identify struggling students early, based on exercise scores rather than just attendance.
-3. Enhance the model with additional features like homework scores, quiz results, and study habits for better predictions.
-
-🚀 Tools & Technologies Used
-1. Google Sheets for data organization
-2. Python (Google Colab, Pandas, NumPy, Scikit-Learn) for regression modeling
-3. Matplotlib & Seaborn for data visualization
-
-This project highlights the power of data-driven decision-making in education and demonstrates how predictive analytics can help improve student outcomes.
+## Data Overview
+The dataset consisted of 145 students with the following key variables:
+• Attendance Percentage (weekly class attendance rate)
+• Average Exercise Score (average score from class exercises)
+• Overall Semester Performance (final score for the semester)
+Data was cleaned to exclude students with missing values and zero scores.
+## Key Findings
+### Correlation Analysis
+A heatmap analysis showed the following relationships:
+• Attendance vs. Overall Performance: r = 0.411 (moderate positive correlation)
+• Exercise Score vs. Overall Performance: r = 0.838 (strong positive correlation)
+• Attendance vs. Exercise Score: r = 0.463 (moderate positive correlation)
+This suggests that while both attendance and exercise scores influence overall performance, exercise scores have a much stronger impact.
+### Regression Model Results
+A multiple linear regression model was developed with Attendance Percentage and Average Exercise Score as predictors of Overall Semester Performance.
+Model Coefficients
+• Intercept: 1.34
+• Attendance Coefficient: 0.076
+• Exercise Score Coefficient: 2.205
+#### This means:
+• For every 1% increase in attendance, a student’s semester score increases by 0.076 points (minimal effect).
+• For every 1-point increase in exercise scores, the semester performance improves by 2.205 points (significant effect).
+Model Performance
+• R-squared: 0.535 (53.5% of the variance in performance is explained by attendance and exercise scores)
+• Mean Squared Error (MSE): 161.45 (average squared difference between actual and predicted performance)
+### Interpretation of Findings
+• Exercise scores are a stronger predictor of performance than attendance.
+• Attendance alone does not significantly impact performance but may indirectly contribute by improving engagement in exercises.
+• The model is moderately effective (R² = 0.535), suggesting that other factors (e.g., study habits, prior knowledge) influence performance.
+## Recommendations
+1. Encourage Active Participation in Exercises
+  - Since exercise scores strongly correlate with performance, teachers should emphasize frequent, high-quality exercises.
+2. Improve Engagement Rather Than Just Attendance
+  - Instead of enforcing strict attendance policies, focus on interactive learning to keep students engaged.
+3. Incorporate Additional Factors
+  - Future analysis should include quiz scores, homework completion, and past performance to improve prediction accuracy.
+4. Personalized Support for Low-Performing Students
+  - Identify students with low exercise scores and provide targeted academic support.
+## Conclusion
+This study highlights the importance of exercise-based learning in improving student performance. While attendance plays a role, the quality of participation (exercise performance) matters more than just being present.
+Moving forward, interventions should focus on engaging students in exercises and providing additional academic support to maximize their success.
