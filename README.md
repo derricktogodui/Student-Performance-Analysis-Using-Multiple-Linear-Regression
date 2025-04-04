@@ -21,6 +21,8 @@ A heatmap analysis showed the following relationships:
 3. Attendance vs. Exercise Score: r = 0.463 (moderate positive correlation)
 This suggests that while both attendance and exercise scores influence overall performance, exercise scores have a much stronger impact.
 
+![Correlation Analysis](exscorecorr.png)
+
 ### Regression Model Results
 A multiple linear regression model was developed with Attendance Percentage and Average Exercise Score as predictors of Overall Semester Performance.
 Model Coefficients
